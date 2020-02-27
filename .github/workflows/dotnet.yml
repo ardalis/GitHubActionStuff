@@ -4,6 +4,7 @@ on:
   push:
     paths:
     - 'dotnet/**'
+    - '.github/workflows/dotnet.yml'
 
 # filter to dotnet folder
 
