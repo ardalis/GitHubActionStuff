@@ -18,9 +18,9 @@ jobs:
     - name: Set up Nuget.exe
       uses: warrenbuckley/Setup-Nuget@v1
     - name: Restore packages
-      run: nuget restore ".\dotnet\SomeTests\SomeTests\SomeTests.sln"
+      run: nuget restore ".\dotnet\SomeTests\SomeTests.sln"
     - name: Setup MSBuild.exe
       uses: warrenbuckley/Setup-MSBuild@v1
     - name: Build with MSBuild
-      run: msbuild dotnet\SomeTests\SomeTests\SomeTests.sln -p:Configuration=Release
+      run: msbuild dotnet\SomeTests\SomeTests.sln -p:Configuration=Release
       
