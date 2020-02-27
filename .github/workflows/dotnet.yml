@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Set Nuget.exe
-      run: warrenbuckley/Setup-Nuget@v1
+      uses: warrenbuckley/Setup-Nuget@v1
     - name: Restore packages
       run: nuget restore dotnet\SomeTests\SomeTests\SomeTests.sln
     - name: Setup MSBuild.exe
