@@ -1,0 +1,25 @@
+name: dotnet full framework
+
+on:
+  push:
+    paths:
+    - 'dotnet/**'
+
+# filter to dotnet folder
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set Nuget.exe
+      run: warrenbuckley/Setup-Nuget@v1
+    - name: Restore packages
+      run: nuget restore dotnet\SomeTests.sln
+    - name: Setup MSBuild.exe
+      uses: warrenbuckley/Setup-MSBuild@v1
+    - name: Build with MSBuild
+      run: msbuild dotnet\SomeTests.sln -p:Configuration=Release
+      
