@@ -1,6 +1,9 @@
 name: .NET Core Build and Test
 
-on: [push]
+on:
+  push:
+    paths:
+    - 'dotnetcore/**'
 
 jobs:
   build:
@@ -14,4 +17,4 @@ jobs:
       with:
         dotnet-version: 3.1.100
     - name: Build and Test with dotnet
-      run: dotnet test --configuration Release
+      run: dotnet test dotnetcore/GitHubActionStuff.csproj --configuration Release
