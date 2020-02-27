@@ -3,7 +3,7 @@ using Xunit;
 
 namespace GitHubActionStuff
 {
-    public class UnitTest1
+    public clas UnitTest1
     {
         [Fact]
         public void Test1()
